@@ -1,0 +1,43 @@
+{
+  "name": "vue-components-pro",
+  "version": "0.0.0",
+  "private": true,
+  "description": "vue3 components Headless UI",
+  "type": "module",
+  "scripts": {
+    "ready": "vp check && vp run -r test && vp run -r build",
+    "dev": "histoire dev",
+    "changeset": "changeset",
+    "version-packages": "changeset version && pnpm install --lockfile-only",
+    "release": "pnpm run ready && changeset publish",
+    "prepare": "vp config"
+  },
+  "devDependencies": {
+    "@changesets/cli": "catalog:dev",
+    "@commitlint/cli": "catalog:dev",
+    "@commitlint/config-conventional": "catalog:dev",
+    "@histoire/plugin-vue": "catalog:dev",
+    "@types/jsdom": "catalog:types",
+    "@types/node": "catalog:types",
+    "@vitejs/plugin-vue": "catalog:dev",
+    "@vitejs/plugin-vue-jsx": "catalog:dev",
+    "@vue/test-utils": "catalog:dev",
+    "flexsearch": "catalog:dev",
+    "histoire": "catalog:dev",
+    "jsdom": "catalog:dev",
+    "less": "catalog:dev",
+    "shiki": "catalog:dev",
+    "typescript": "catalog:dev",
+    "vite": "catalog:",
+    "vite-plugin-tsx-resolve-types": "catalog:dev",
+    "vite-plus": "catalog:",
+    "vitest": "catalog:",
+    "vscode-oniguruma": "catalog:dev",
+    "vscode-textmate": "catalog:dev",
+    "vue": "catalog:dev"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "packageManager": "pnpm@10.33.0"
+}

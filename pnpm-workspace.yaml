@@ -1,0 +1,52 @@
+packages:
+  - packages/*
+
+catalog:
+  vite: npm:@voidzero-dev/vite-plus-core@latest
+  vite-plus: latest
+  vitest: npm:@voidzero-dev/vite-plus-test@latest
+
+catalogMode: prefer
+
+catalogs:
+  dev:
+    '@changesets/cli': ^2.29.7
+    '@commitlint/cli': ^20.1.0
+    '@commitlint/config-conventional': ^20.0.0
+    '@histoire/plugin-vue': ^1.0.0-beta.1
+    '@vitejs/plugin-vue': ^6.0.6
+    '@vitejs/plugin-vue-jsx': ^5.1.5
+    '@vue/test-utils': ^2.4.6
+    flexsearch: ^0.8.212
+    histoire: ^1.0.0-beta.1
+    jsdom: ^29.0.2
+    less: ^4.6.4
+    shiki: ^4.0.2
+    typescript: ~5.9.3
+    vite-plugin-tsx-resolve-types: ^1.0.1
+    vue: ^3.5.22
+    vscode-oniguruma: ^2.0.1
+    vscode-textmate: ^9.3.2
+  prod:
+    '@v-c/overflow': ^1.0.5
+    '@v-c/trigger': ^1.0.14
+    '@v-c/util': ^1.0.19
+    '@v-c/virtual-list': ^1.0.7
+
+  types:
+    '@types/jsdom': ^28.0.1
+    '@types/node': ^24.12.0
+
+cleanupUnusedCatalogs: true
+
+overrides:
+  vite: 'catalog:'
+  vitest: 'catalog:'
+
+peerDependencyRules:
+  allowAny:
+    - vite
+    - vitest
+  allowedVersions:
+    vite: '*'
+    vitest: '*'

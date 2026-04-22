@@ -1,0 +1,41 @@
+{
+  "name": "@vc-pro/select",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "select"
+  ],
+  "license": "MIT",
+  "author": "",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "vp pack --watch",
+    "test": "vp test",
+    "check": "vp check",
+    "prepublishOnly": "pnpm build"
+  },
+  "dependencies": {
+    "@v-c/overflow": "catalog:prod",
+    "@v-c/trigger": "catalog:prod",
+    "@v-c/util": "catalog:prod",
+    "@v-c/virtual-list": "catalog:prod"
+  },
+  "devDependencies": {
+    "vue": "catalog:dev"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  }
+}
